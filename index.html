@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+    </head>
+
+    <body>
+        <div class="Navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div id="home">
+            <video autoplay muted loop id="background_video">
+                <source src="./video/background_vid.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <div class="Video_Text">
+            <h1 class="white-text">Mason Strewons's Portfolio</h1>
+            <br>
+            <br>
+            <strong>
+                <p class="center">
+                    <q>Any fool can write code that a computer can understand.
+                        <br>Good programmers write code that humans can understand.
+                    </q>
+                    <br> -Martin Fowler
+                    <br>
+                    <br>
+                    <br>
+                    <br> Hello! My name is Mason, an aspiring software developer. Welcome to my website where I'll tell you a bit about me and show you some of my work.
+                    <br>
+                    <br>
+                    <br>
+                    <br> Thanks for checking out the site!
+                </p>
+            </strong>
+        </div>
+
+        <div class="Row" id="about">
+
+            <div class="Column_2">
+                <img src="./img/computer1.jpg" alt="A computer">
+            </div>
+            
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am an aspiring software developer who enjoys all aspects of computers. I also play Bowling.
+                    <br>
+                    <br>I am enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software and Web Developer Boot Camp. I am training on the launguages: HTML, CSS, Javascript, and C#.
+                    <br>I am looking for experience and would love to help with a project of yours. <a href="#contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <div class="Row" id="GitHub">
+
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    All of my projects will be posted in this GitHub link. It will always be up to date.
+                    <br>
+                    <p class="center"><a href="https://github.com/Tehkilla777" target="_blank">My Github Projects</a></p>
+                </p>
+            </div>
+
+            <div class="Column_2">
+                <a href="https://github.com/Tehkilla777" target="_blank"><img src="./img/github.png" alt="The GitHub Logo"></a>
+            </div>
+        </div>
+
+        <div class="Row" id="contact">
+
+            <div class="Column_2 Column_tall">
+                <img src="./img/computer2.jpg" alt="A computer image">
+            </div>
+
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+
+                <form action="https://formspree.io/f/mpzvydvd" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <p class="center">Mason's Portfolio Website | &copy; 2024</p>
+                <br>
+            </p>
+        </footer>
+
+    </body>
+
+</html>
