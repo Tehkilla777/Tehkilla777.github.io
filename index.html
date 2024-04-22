@@ -5,15 +5,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width" />
         <title>My Portfolio Website</title>
+        <link rel="shortcut icon" type="img/jpg" href="img/shortcut_icon.png">
         <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
     </head>
 
-    <body>
+    <body class="Background">
         <div class="Navbar">
             <a class="active" href="#home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
         <div id="home">
@@ -45,6 +47,45 @@
             </strong>
         </div>
 
+        <div id="Slideshow">
+            <div id="slideshow_Background">
+                <div id="Slideshow_Container">
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/image1.jpg" alt="A picture of me">
+                        <div class="text">I will happily help you with your at hand project!</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/image2.jpg" alt="A picture of programming launguages">
+                        <div class="text">I am trained in the launguages: HTML, CSS, and JavaScript</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/image3.jpg" alt="A picture of JavaScript">
+                        <div class="text">The proggramming launguage JavaScript</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/image4.jpg" alt="A picture of Visual Studio Code">
+                        <div class="text">The software I use to code: Visual Studio</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="img/image5.jpg" alt="Another picture of me">
+                        <div class="text">Let me know if I can help using the contact button!</div>
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+
         <div class="Row" id="about">
 
             <div class="Column_2">
@@ -57,7 +98,7 @@
                     I am an aspiring software developer who enjoys all aspects of computers. I also play Bowling.
                     <br>
                     <br>I am enrolled in <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software and Web Developer Boot Camp. I am training on the launguages: HTML, CSS, Javascript, and C#.
-                    <br>I am looking for experience and would love to help with a project of yours. <a href="#contact">Contact</a> me below!
+                    <br>I am looking for experience and would love to help with a project of yours. <a onclick="openForm()" class="contact">Contact</a> me below!
                 </p>
             </div>
         </div>
@@ -78,26 +119,25 @@
             </div>
         </div>
 
-        <div class="Row" id="contact">
+        <dive id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mpzvydvd" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Enter your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter your Email here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Enter your message here" name="message">
 
-            <div class="Column_2 Column_tall">
-                <img src="./img/computer2.jpg" alt="A computer image">
-            </div>
-
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-
-                <form action="https://formspree.io/f/mpzvydvd" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                    <button stype="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
-        </div>
+        </dive>
 
         <footer>
             <p>
@@ -105,7 +145,7 @@
                 <br>
             </p>
         </footer>
-
+        <script src="js/JavaScript.js"></script>
     </body>
 
 </html>
